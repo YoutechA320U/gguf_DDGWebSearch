@@ -333,7 +333,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
             web_search_summary= web_search_summary["choices"][0]["text"]
             site_summary=web_search_summary
             print(site_summary)      
-   if tool_use_flag !=1 or prompt !="":
+   if tool_use_flag !=1 or prompt =="":
       print("インターネット検索をしない\n")
       site_summary="なし"
    return site_summary
