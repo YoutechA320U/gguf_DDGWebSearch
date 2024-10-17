@@ -61,7 +61,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
            temperature = 0.77,
            top_p=0.95, 
            top_k=40, 
-           stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
+           #stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
       )
       try:
        tool_use_flag=int((tool_use_flag["choices"][0]["text"]).replace("\n",""))
@@ -88,7 +88,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
                temperature = 0.77,
                top_p=0.95, 
                top_k=40, 
-               stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
+               #stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
         )
         websearch_word= websearch_word["choices"][0]["text"]
         print(websearch_word)
@@ -150,7 +150,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
                temperature = 0.77,
                top_p=0.95, 
                top_k=40, 
-               stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
+               #stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
         )
         try:
          website_summary_flag=int((website_summary_flag["choices"][0]["text"]).replace("\n",""))
@@ -187,7 +187,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
                temperature = 0.77,
                top_p=0.95, 
                top_k=40, 
-               stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
+               #stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
             )
             web_search_summary= web_search_summary["choices"][0]["text"]
             site_summary=web_search_summary
@@ -291,7 +291,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
                         temperature = 0.77,
                         top_p=0.95, 
                         top_k=40, 
-                        stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
+                        #stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
                      )
                      site_summary_split= site_summary_split["choices"][0]["text"]
                      site_summary_split_join=site_summary_split_join+site_summary_split
@@ -328,7 +328,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
                temperature = 0.77,
                top_p=0.95, 
                top_k=40, 
-               stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
+               #stop=[system_bos_token,system_eos_token,user_bos_token,assistant_bos_token,eos_token] 
             )
             web_search_summary= web_search_summary["choices"][0]["text"]
             site_summary=web_search_summary
