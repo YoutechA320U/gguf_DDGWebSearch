@@ -52,7 +52,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
 ** 現在時刻 **:\n\
 {day}\n\
 ** 会話履歴 **:\n\
-{prompt}{eos_token}\n\
+{prompt}{eos_token}\
 {assistant_bos_token}"
       print(first_prompt)
       tool_use_flag = llm(
@@ -79,7 +79,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
 質問にURLを含む場合はURLだけを出力してください。\n\
 \n\
 ** 会話履歴 **:\n\
-{prompt}{eos_token}\n\
+{prompt}{eos_token}\
 {assistant_bos_token}"
         print(websearch_prompt)
         websearch_word = llm(
@@ -141,7 +141,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
  * タイトル *:\n\
  {titles}\n\
  * 説明 *:\n\
- {discriptiopns}{eos_token}\n\
+ {discriptiopns}{eos_token}\
 {assistant_bos_token}"
         print(website_summary_check)
         website_summary_flag = llm(
@@ -178,7 +178,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
  * タイトル *:\n\
  {titles}\n\
  * 説明 *:\n\
- {discriptiopns}{eos_token}\n\
+ {discriptiopns}{eos_token}\
 {assistant_bos_token}"
             print(web_search_summary_prompt)
             web_search_summary = llm(
@@ -210,7 +210,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
  * タイトル *:\n\
 {titles}\n\
  * 説明 *:\n\
-{discriptiopns}{eos_token}\n\
+{discriptiopns}{eos_token}\
 {assistant_bos_token}"
             print(website_jumpcheck)
             website_No = llm(
@@ -281,7 +281,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
 {prompt}\n\
 \n\
 **Webサイトの文章:**\n\
-{split_text[i]}{eos_token}\n\
+{split_text[i]}{eos_token}\
 {assistant_bos_token}"
                      site_summary_split_prompt = site_summary.replace("{prompt}",prompt).replace("{split_text}",split_text[i])
                      #print(site_summary)
@@ -319,7 +319,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
  * タイトル *:\n\
  {titles}\n\
  * 説明 *:\n\
- {discriptiopns}{eos_token}\n\
+ {discriptiopns}{eos_token}\
 {assistant_bos_token}"
             print(web_search_summary_prompt)
             web_search_summary = llm(
