@@ -1,6 +1,6 @@
 ## gguf_DDGWebSearch
 
-極力LangChainに頼らず実装したLLM用DuckDuckGo検索ツール。
+極力LangChainに頼らず実装した日本語LLM用DuckDuckGo検索ツール。
 
 Web検索を頼むような口ぶりで入力すると検索した結果の要約を返します
 
