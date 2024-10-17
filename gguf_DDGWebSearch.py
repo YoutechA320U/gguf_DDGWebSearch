@@ -6,24 +6,28 @@ from langchain.document_loaders import WebBaseLoader
 #user_bos_token=""
 #assistant_bos_token=" [/INST]"
 #eos_token="</s>"
+
 #llama3
 #system_bos_token="<|begin_of_text|><<|start_header_id|>system<|end_header_id|>\n"
 #system_eos_token="<|eot_id|>\n"
 #user_bos_token="<|start_header_id|>user <|end_header_id|>\n\n"
 #assistant_bos_token="<|start_header_id|>assistant <|end_header_id|>\n\n"
 #eos_token="<|eot_id|>\n"
+
 #calm3,qwen
 system_bos_token="<|im_start|>system\n"
 system_eos_token="<|im_end|>\n"
 user_bos_token="<|im_start|>user\n"
 assistant_bos_token="<|im_start|>assistant\n"
 eos_token="<|im_end|>\n"
+
 #gemma2
 #system_bos_token=""
 #system_eos_token=""
 #user_bos_token="<start_of_turn>user\n"
 #assistant_bos_token="<start_of_turn>model\n"
 #eos_token="<end_of_turn>\n"
+
 def Run(n_ctx,llm,prompt):#Web検索の判断、実行
    if prompt !="":#プロンプトに入力があったら各種推論実行
 #############################################################
@@ -329,7 +333,7 @@ Web・インターネット検索が不要と判断したら0を出力してく�
             web_search_summary= web_search_summary["choices"][0]["text"]
             site_summary=web_search_summary
             print(site_summary)      
-   if tool_use_flag !=1:
+   if tool_use_flag !=1 or prompt !="":
       print("インターネット検索をしない\n")
       site_summary="なし"
    return site_summary
