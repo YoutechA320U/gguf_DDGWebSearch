@@ -29,7 +29,7 @@ Web検索を頼むような口ぶりで入力すると検索した結果の要�
     prompt = "2025年4月現在の日本の総理大臣をインターネット検索して"
     #ツール実行
     for output in gguf_DDGWebSearch.Run(llm=llm,prompt=prompt,model_type=3,n_ctx=n_ctx):#model_typeでモデルに応じたプロンプトトークンを付与。3はChatML系
-    pass
+        pass
     site_summary=output
     #ツールの実行結果
     print(site_summary)
